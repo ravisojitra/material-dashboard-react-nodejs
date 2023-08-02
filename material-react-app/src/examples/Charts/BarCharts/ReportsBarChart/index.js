@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useMemo } from "react";
 
 // porp-types is a library for typechecking of props
@@ -33,8 +18,8 @@ import MDTypography from "components/MDTypography";
 // ReportsBarChart configurations
 import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
 
-function ReportsBarChart({ color, title, description, date, chart }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
+function ReportsBarChart({ color, title, description, date, chartData }) {
+  const { data, options } = configs(chartData.labels || [], chartData.datasets || {});
 
   return (
     <Card sx={{ height: "100%" }}>
@@ -54,7 +39,7 @@ function ReportsBarChart({ color, title, description, date, chart }) {
               <Bar data={data} options={options} />
             </MDBox>
           ),
-          [chart, color]
+          [chartData, color]
         )}
         <MDBox pt={3} pb={1} px={1}>
           <MDTypography variant="h6" textTransform="capitalize">
@@ -90,7 +75,7 @@ ReportsBarChart.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   date: PropTypes.string.isRequired,
-  chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
+  chartData: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
 };
 
 export default ReportsBarChart;

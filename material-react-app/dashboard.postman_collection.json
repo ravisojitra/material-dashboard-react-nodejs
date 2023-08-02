@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "ec54bf9b-9ca2-4512-ad96-0bce914759af",
+		"name": "dashboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22132961",
+		"_collection_link": "https://lively-capsule-601093.postman.co/workspace/Nirali's-workspace~8856b207-1018-4d31-85d4-f0d621479387/collection/22132961-ec54bf9b-9ca2-4512-ad96-0bce914759af?action=share&creator=22132961&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "get dashboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/dashboard",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1194-K6Q+arLruCBKSbNglrMG73VV3B8\""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Aug 2023 04:30:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"summary\": {\n        \"bookings\": {\n            \"currentWeekBooking\": 50,\n            \"pastWeekBooking\": 75\n        },\n        \"users\": {\n            \"tillTodayUsers\": 1200,\n            \"pastMonthUsers\": 1800\n        },\n        \"revenue\": {\n            \"todayRevenue\": 12000,\n            \"yesterDayRevenue\": 13000\n        },\n        \"followers\": 23\n    },\n    \"charts\": {\n        \"websiteViews\": [\n            {\n                \"Mon\": 10\n            },\n            {\n                \"Tue\": 10\n            },\n            {\n                \"Wed\": 10\n            },\n            {\n                \"Thu\": 10\n            },\n            {\n                \"Fri\": 10\n            },\n            {\n                \"Sat\": 10\n            },\n            {\n                \"Sun\": 10\n            }\n        ],\n        \"dailySales\": [\n            {\n                \"Jan\": 300\n            },\n            {\n                \"Feb\": 300\n            },\n            {\n                \"Mar\": 300\n            },\n            {\n                \"Apr\": 300\n            },\n            {\n                \"May\": 300\n            }\n        ],\n        \"completedTasks\": [\n            {\n                \"Jan\": 15\n            },\n            {\n                \"Feb\": 10\n            },\n            {\n                \"Mar\": 12\n            },\n            {\n                \"Apr\": 30\n            },\n            {\n                \"May\": 28\n            }\n        ]\n    },\n    \"projects\": {\n        \"completedProjects\": 20,\n        \"list\": [\n            {\n                \"company\": {\n                    \"logo\": \"https://i.ibb.co/7tGHkVT/logo.png\",\n                    \"name\": \"DhiWise\"\n                },\n                \"members\": [\n                    {\n                        \"name\": \"Ravi Sojitra\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/50.jpg\"\n                    },\n                    {\n                        \"name\": \"Rahul Shingala\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/58.jpg\"\n                    },\n                    {\n                        \"name\": \"Nidhi Desai\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/68.jpg\"\n                    },\n                    {\n                        \"name\": \"Rahul Patel\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/3.jpg\"\n                    }\n                ],\n                \"budget\": 14000,\n                \"completionPercentage\": 90\n            },\n            {\n                \"company\": {\n                    \"logo\": \"https://i.ibb.co/2NTTTkK/l-VU564-K-1.png\",\n                    \"name\": \"Dpanda\"\n                },\n                \"members\": [\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/58.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name 1\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/89.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name 2\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/32.jpg\"\n                    }\n                ],\n                \"budget\": 10000,\n                \"completionPercentage\": 50\n            },\n            {\n                \"company\": {\n                    \"logo\": \"https://i.ibb.co/Zd9m63M/ip-Be8-Ys-1.png\",\n                    \"name\": \"Upflowy\"\n                },\n                \"members\": [\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/50.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/68.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/32.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/3.jpg\"\n                    }\n                ],\n                \"budget\": 20000,\n                \"completionPercentage\": 20\n            },\n            {\n                \"company\": {\n                    \"logo\": \"https://i.ibb.co/tcqdpXF/MK1-ABdx-1.png\",\n                    \"name\": \"DataBrain\"\n                },\n                \"members\": [\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/58.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/68.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/3.jpg\"\n                    }\n                ],\n                \"budget\": 21000,\n                \"completionPercentage\": 65\n            },\n            {\n                \"company\": {\n                    \"logo\": \"https://i.ibb.co/JQ6sFg2/oc-HKn9v-1.png\",\n                    \"name\": \"Brik\"\n                },\n                \"members\": [\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/58.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/men/89.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/68.jpg\"\n                    },\n                    {\n                        \"name\": \"User Name\",\n                        \"url\": \"https://randomuser.me/api/portraits/women/3.jpg\"\n                    }\n                ],\n                \"budget\": 9000,\n                \"completionPercentage\": 79\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}

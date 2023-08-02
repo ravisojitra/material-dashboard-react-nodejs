@@ -1,49 +1,37 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import dotenv from "dotenv";
-import "./passport.js";
-import { dbConnect } from "./mongo";
-import { meRoutes, authRoutes } from "./routes";
-import path from "path";
-import * as fs from "fs";
-import cron from "node-cron";
-import ReseedAction from "./mongo/ReseedAction";
+import jsonServer from "json-server"
+import path from "path"
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
 
-dotenv.config();
+const __dirname = path.dirname(__filename);
 
-const PORT = process.env.PORT || 8080;
-const app = express();
+const server = jsonServer.create()
+const router = jsonServer.router(path.join(__dirname, 'db.json'))
+const middlewares = jsonServer.defaults()
 
-const whitelist = [process.env.APP_URL_CLIENT];
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-};
+server.use(middlewares)
 
-dbConnect();
+// Add custom routes before JSON Server router
+server.get('/echo', (req, res) => {
+  res.json({ test: "ok" })
+})
 
-app.use(cors(corsOptions));
-app.use(bodyParser.json({ type: "application/vnd.api+json", strict: false }));
+server.post("/login", (req, res) => {
+  res.json({ user: "test" })
+})
 
-app.get("/", function (req, res) {
-  const __dirname = fs.realpathSync(".");
-  res.sendFile(path.join(__dirname, "/src/landing/index.html"));
-});
+// To handle POST, PUT and PATCH you need to use a body-parser
+// You can use the one used by JSON Server
+server.use(jsonServer.bodyParser)
+server.use((req, res, next) => {
+  // if (req.method === 'POST') {
+  //   req.body.createdAt = Date.now()
+  // }
+  // Continue to JSON Server router
+  next()
+})
 
-app.use("/", authRoutes);
-app.use("/me", meRoutes);
+// custom routes
+server.use(router)
 
-if (process.env.SCHEDULE_HOUR) {
-  cron.schedule(`0 */${process.env.SCHEDULE_HOUR} * * *'`, () => {
-    ReseedAction();
-  });
-}
-
-app.listen(PORT, () => console.log(`Server listening to port ${PORT}`));
+server.listen(8080, () => console.log(`Server listening to 8080 ${8080}`));

@@ -1,0 +1,205 @@
+{
+  "dashboard": {
+    "summary": {
+      "bookings": {
+        "currentWeekBooking": 50,
+        "pastWeekBooking": 75
+      },
+      "users": {
+        "tillTodayUsers": 1200,
+        "pastMonthUsers": 1800
+      },
+      "revenue": {
+        "todayRevenue": 12000,
+        "yesterDayRevenue": 13000
+      },
+      "followers": 23
+    },
+    "charts": {
+      "websiteViews": [
+        {
+          "Mon": 10
+        },
+        {
+          "Tue": 10
+        },
+        {
+          "Wed": 10
+        },
+        {
+          "Thu": 10
+        },
+        {
+          "Fri": 10
+        },
+        {
+          "Sat": 10
+        },
+        {
+          "Sun": 10
+        }
+      ],
+      "dailySales": [
+        {
+          "Jan": 300
+        },
+        {
+          "Feb": 300
+        },
+        {
+          "Mar": 300
+        },
+        {
+          "Apr": 300
+        },
+        {
+          "May": 300
+        }
+      ],
+      "completedTasks": [
+        {
+          "Jan": 15
+        },
+        {
+          "Feb": 10
+        },
+        {
+          "Mar": 12
+        },
+        {
+          "Apr": 30
+        },
+        {
+          "May": 28
+        }
+      ]
+    },
+    "projects": {
+      "completedProjects": 20,
+      "list": [
+        {
+          "company": {
+            "logo": "https://i.ibb.co/7tGHkVT/logo.png",
+            "name": "DhiWise"
+          },
+          "members": [
+            {
+              "name": "Ravi Sojitra",
+              "url": "https://randomuser.me/api/portraits/men/50.jpg"
+            },
+            {
+              "name": "Rahul Shingala",
+              "url": "https://randomuser.me/api/portraits/men/58.jpg"
+            },
+            {
+              "name": "Nidhi Desai",
+              "url": "https://randomuser.me/api/portraits/women/68.jpg"
+            },
+            {
+              "name": "Rahul Patel",
+              "url": "https://randomuser.me/api/portraits/men/3.jpg"
+            }
+          ],
+          "budget": 14000,
+          "completionPercentage": 90
+        },
+        {
+          "company": {
+            "logo": "https://i.ibb.co/2NTTTkK/l-VU564-K-1.png",
+            "name": "Dpanda"
+          },
+          "members": [
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/men/58.jpg"
+            },
+            {
+              "name": "User Name 1",
+              "url": "https://randomuser.me/api/portraits/men/89.jpg"
+            },
+            {
+              "name": "User Name 2",
+              "url": "https://randomuser.me/api/portraits/women/32.jpg"
+            }
+          ],
+          "budget": 10000,
+          "completionPercentage": 50
+        },
+        {
+          "company": {
+            "logo": "https://i.ibb.co/Zd9m63M/ip-Be8-Ys-1.png",
+            "name": "Upflowy"
+          },
+          "members": [
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/men/50.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/68.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/32.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/3.jpg"
+            }
+          ],
+          "budget": 20000,
+          "completionPercentage": 20
+        },
+        {
+          "company": {
+            "logo": "https://i.ibb.co/tcqdpXF/MK1-ABdx-1.png",
+            "name": "DataBrain"
+          },
+          "members": [
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/men/58.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/68.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/3.jpg"
+            }
+          ],
+          "budget": 21000,
+          "completionPercentage": 65
+        },
+        {
+          "company": {
+            "logo": "https://i.ibb.co/JQ6sFg2/oc-HKn9v-1.png",
+            "name": "Brik"
+          },
+          "members": [
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/men/58.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/men/89.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/68.jpg"
+            },
+            {
+              "name": "User Name",
+              "url": "https://randomuser.me/api/portraits/women/3.jpg"
+            }
+          ],
+          "budget": 9000,
+          "completionPercentage": 79
+        }
+      ]
+    }
+  }
+}

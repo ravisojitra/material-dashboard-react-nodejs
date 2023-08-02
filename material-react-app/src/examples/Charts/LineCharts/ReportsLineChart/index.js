@@ -1,17 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { useMemo } from "react";
 
@@ -33,8 +19,8 @@ import MDTypography from "components/MDTypography";
 // ReportsLineChart configurations
 import configs from "examples/Charts/LineCharts/ReportsLineChart/configs";
 
-function ReportsLineChart({ color, title, description, date, chart }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
+function ReportsLineChart({ color, title, description, date, chartData }) {
+  const { data, options } = configs(chartData.labels || [], chartData.datasets || {});
 
   return (
     <Card sx={{ height: "100%" }}>
@@ -54,7 +40,7 @@ function ReportsLineChart({ color, title, description, date, chart }) {
               <Line data={data} options={options} />
             </MDBox>
           ),
-          [chart, color]
+          [chartData, color]
         )}
         <MDBox pt={3} pb={1} px={1}>
           <MDTypography variant="h6" textTransform="capitalize">
@@ -90,7 +76,7 @@ ReportsLineChart.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   date: PropTypes.string.isRequired,
-  chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
+  chartData: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
 };
 
 export default ReportsLineChart;

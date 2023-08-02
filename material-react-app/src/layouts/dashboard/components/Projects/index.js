@@ -1,17 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { useState } from "react";
 
@@ -31,8 +17,14 @@ import DataTable from "examples/Tables/DataTable";
 // Data
 import data from "layouts/dashboard/components/Projects/data";
 
+let columns = [
+  { Header: "companies", accessor: "companies", width: "45%", align: "left" },
+  { Header: "members", accessor: "members", width: "10%", align: "left" },
+  { Header: "budget", accessor: "budget", align: "center" },
+  { Header: "completion", accessor: "completion", align: "center" },
+]
 function Projects() {
-  const { columns, rows } = data();
+  const { rows } = data();
   const [menu, setMenu] = useState(null);
 
   const openMenu = ({ currentTarget }) => setMenu(currentTarget);
